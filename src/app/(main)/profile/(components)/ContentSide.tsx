@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 
 import NotEditableInfo from "./NotEditableInfo";
 import { useEffect, useRef, useState } from "react";
-import { EditableInfo } from "./EditableInfo";
+import EditableInfo from "./EditableInfo";
 import {
   getEditableFields,
   getIneditableFields,
