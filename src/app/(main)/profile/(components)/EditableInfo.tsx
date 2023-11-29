@@ -61,5 +61,5 @@ const EditableInfo = forwardRef(
     );
   }
 );
-
+EditableInfo.displayName = "EditableInfo";
 export default EditableInfo;
