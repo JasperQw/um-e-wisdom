@@ -18,6 +18,7 @@ import { useEffect, useRef } from "react";
 import ErrorAlert from "./(components)/errorAlert";
 import SubmitBtn from "./(components)/submitBtn";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Login() {
   const router = useRouter();
@@ -34,7 +35,8 @@ export default function Login() {
   }, [loginState]);
   return (
     <div className="flex items-center w-full h-full">
-      <div className="relative w-full h-full flex-1 bg-[url('/um-library.jpeg')] bg-cover bg-left">
+      <div className="relative w-full h-full flex-1 bg-cover bg-left">
+        <Image src={"/um-library.jpeg"} fill alt="bg" />
         <div className="inset-0 absolute flex justify-start px-[4rem] tracking-tight bg-black bg-opacity-50">
           <div className="h-[4rem] flex gap-3 items-center font-semibold text-xl text-white ">
             <a href={"/book"}> UM e-Wisdom</a>
