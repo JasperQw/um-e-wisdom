@@ -6,11 +6,9 @@ import SelectFaculty from "./SelectFaculty";
 import { useFormState } from "react-dom";
 import { updateInfoActions } from "../(actions)/updateInfoActions";
 import { ForwardedRef, forwardRef, useEffect, useState } from "react";
-import { getEditableFields } from "../(functions)/InfoSectionFunctions";
 import { editableFieldsDto } from "@/dto/profileDTO";
-import InformationLoading from "../(Loading)/InformationLoading";
 
-export const EditableInfo = forwardRef(
+const EditableInfo = forwardRef(
   (
     { editableFields }: { editableFields: editableFieldsDto },
     ref: ForwardedRef<HTMLFormElement>
@@ -63,3 +61,5 @@ export const EditableInfo = forwardRef(
     );
   }
 );
+
+export default EditableInfo;
