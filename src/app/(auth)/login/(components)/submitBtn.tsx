@@ -6,7 +6,7 @@ import { useFormStatus } from "react-dom";
 export default function SubmitBtn() {
   const status = useFormStatus();
   return (
-    <Button disabled={status.pending} type="submit">
+    <Button className="w-full" disabled={status.pending} type="submit">
       Login
     </Button>
   );

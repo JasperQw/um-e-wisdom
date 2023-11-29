@@ -6,7 +6,7 @@ export default async function bookSeeder() {
     update: {},
     create: {
       borrowable: true,
-      holdable: true,
+      holdable: false,
       name: "Employment of Foreign Workers (Levy) (Amendment No. 1) Order 1991.",
       bookImage: "/next.svg",
       publication: {
@@ -97,9 +97,9 @@ export default async function bookSeeder() {
     where: { id: 2 },
     update: {},
     create: {
-      name: "Employment of Foreign Workers (Levy) (Amendment No. 2) Order 1991.",
+      name: "Employment of Foreign Workers (Levy) (Amendment No. 1) Order 1991.",
       borrowable: true,
-      holdable: true,
+      holdable: false,
       bookImage: "/next.svg",
       publication: {
         connectOrCreate: {
@@ -189,9 +189,9 @@ export default async function bookSeeder() {
     where: { id: 3 },
     update: {},
     create: {
-      borrowable: false,
+      borrowable: true,
       holdable: false,
-      name: "Employment of Foreign Workers (Levy) (Amendment No. 3) Order 1991.",
+      name: "Employment of Foreign Workers (Levy) (Amendment No. 1) Order 1991.",
       bookImage: "/next.svg",
       publication: {
         connectOrCreate: {
@@ -282,8 +282,8 @@ export default async function bookSeeder() {
     update: {},
     create: {
       borrowable: true,
-      holdable: true,
-      name: "Employment of Foreign Workers (Levy) (Amendment No. 4) Order 1991.",
+      holdable: false,
+      name: "Employment of Foreign Workers (Levy) (Amendment No. 1) Order 1991.",
       bookImage: "/next.svg",
       publication: {
         connectOrCreate: {

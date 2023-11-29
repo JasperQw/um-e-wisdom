@@ -33,9 +33,16 @@ export default function Login() {
     }
   }, [loginState]);
   return (
-    <div className="flex justify-center items-center w-full h-full px-5">
-      <Card className="w-[40rem]">
-        <CardHeader>
+    <div className="flex items-center w-full h-full">
+      <div className="relative w-full h-full flex-1 bg-[url('/um-library.jpeg')] bg-cover bg-left">
+        <div className="inset-0 absolute flex justify-start px-[4rem] tracking-tight bg-black bg-opacity-50">
+          <div className="h-[4rem] flex gap-3 items-center font-semibold text-xl text-white ">
+            <a href={"/book"}> UM e-Wisdom</a>
+          </div>
+        </div>
+      </div>
+      <Card className="w-1/2 h-full flex flex-col justify-center items-center rounded-none border-none flex-1">
+        <CardHeader className="flex flex-col justify-center items-center">
           <CardTitle>Login</CardTitle>
           <CardDescription>Login to your account.</CardDescription>
           <ErrorAlert
@@ -44,10 +51,10 @@ export default function Login() {
           />
         </CardHeader>
 
-        <form action={loginAction} ref={formRef}>
+        <form className="w-[30rem]" action={loginAction} ref={formRef}>
           <CardContent>
             <div>
-              <div className="grid w-full items-center gap-4">
+              <div className="grid w-full gap-4">
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="student_id">Student ID</Label>
                   <Input
@@ -69,11 +76,11 @@ export default function Login() {
               </div>
             </div>
           </CardContent>
-          <CardFooter className="flex justify-between">
-            <Button type="button" variant="link">
+          <CardFooter className="flex flex-col w-full space-y-2">
+            <SubmitBtn />
+            <Button className="w-full" type="button" variant="link">
               Forget Password?
             </Button>
-            <SubmitBtn />
           </CardFooter>
         </form>
       </Card>
