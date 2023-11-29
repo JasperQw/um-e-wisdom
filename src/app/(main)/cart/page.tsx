@@ -46,6 +46,7 @@ export default function Cart() {
                 return (
                   <ShowBook
                     book={book}
+                    key={nanoid()}
                     setBooks={setBooks}
                     setPendingCheckout={setPendingCheckout}
                   />

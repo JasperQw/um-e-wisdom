@@ -49,7 +49,7 @@ export default function Pagination({
                     ...
                   </div>
                 </li>
-                <li>
+                <li key={nanoid()}>
                   <a
                     href={`/book?${searchParams
                       .toString()

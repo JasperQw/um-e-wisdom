@@ -29,7 +29,7 @@ export default function ShowBook({
   }
   return (
     <>
-      <div key={nanoid()} className="mb-8">
+      <div className="mb-8">
         <div className="flex gap-10 items-center">
           <div className="min-w-[8rem] h-[10rem] relative z-[-10]">
             <Image

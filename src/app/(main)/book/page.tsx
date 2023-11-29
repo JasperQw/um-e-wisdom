@@ -16,6 +16,7 @@ import Pagination from "./(components)/Pagination";
 import { Separator } from "@/components/ui/separator";
 import Sidebar from "./(components)/Sidebar";
 import { Button } from "@/components/ui/button";
+import { nanoid } from "nanoid";
 
 export default function Book() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -107,7 +108,9 @@ export default function Book() {
             }`}
           >
             {books.length > 0 ? (
-              <ShowBook books={books} />
+              books.map((book) => {
+                return <ShowBook key={nanoid()} book={book} />;
+              })
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center">
                 <h1 className="font-bold text-4xl">404</h1>
