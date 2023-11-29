@@ -1,0 +1,195 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id             Int              @id @default(autoincrement())
+  name           String
+  email          String           @unique
+  phone          String
+  faculty        String
+  studentId      String           @unique
+  password       String
+  date_expire    DateTime         @db.Date
+  status         Status           @relation(fields: [statusId], references: [id])
+  statusId       Int
+  Cart           Cart?
+  Borrow         Borrow[]
+  CollectionList CollectionList[]
+  HoldList       HoldList[]
+
+  @@index([statusId])
+}
+
+model Status {
+  id     Int    @id @default(autoincrement())
+  status String @unique
+  User   User[]
+}
+
+model Book {
+  id              Int              @id @default(autoincrement())
+  code            String           @unique @default(uuid())
+  name            String
+  bookImage       String
+  publicationId   Int
+  publication     Publication      @relation(fields: [publicationId], references: [id])
+  publicationDate String
+  isbn            String
+  edition         String
+  location        Location?
+  bookStatusId    Int
+  bookStatus      BookStatus       @relation(fields: [bookStatusId], references: [id])
+  author          Author[]         @relation("BookToAuthor")
+  language        Language         @relation(fields: [languageId], references: [id])
+  languageId      Int
+  Cart            Cart[]           @relation("BookToCart")
+  Borrow          Borrow[]
+  HoldList        HoldList[]
+  CollectionList  CollectionList[] @relation("BookToCollectionList")
+  borrowable      Boolean
+  holdable        Boolean
+
+  @@index([publicationId])
+  @@index([bookStatusId])
+  @@index([languageId])
+}
+
+model Author {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+  book Book[] @relation("BookToAuthor")
+}
+
+model Publication {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+  book Book[]
+}
+
+model Location {
+  id              Int            @id @default(autoincrement())
+  library         Library        @relation(fields: [libraryId], references: [id])
+  shelfLocation   ShelfLocation? @relation(fields: [shelfLocationId], references: [id])
+  material        Material       @relation(fields: [materialId], references: [id])
+  shelfNumber     ShelfNumber?   @relation(fields: [shelfNumberId], references: [id])
+  Book            Book?          @relation(fields: [bookId], references: [id])
+  libraryId       Int
+  shelfLocationId Int?
+  materialId      Int
+  shelfNumberId   Int?
+  bookId          Int?           @unique
+
+  @@index([libraryId])
+  @@index([bookId])
+  @@index([shelfNumberId])
+  @@index([materialId])
+  @@index([shelfLocationId])
+}
+
+model Library {
+  id       Int        @id @default(autoincrement())
+  name     String     @unique
+  Location Location[]
+}
+
+model Material {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  Location Location[]
+}
+
+model ShelfLocation {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+
+  Location Location[]
+}
+
+model ShelfNumber {
+  id       Int        @id @default(autoincrement())
+  name     String     @unique
+  Location Location[]
+}
+
+model BookStatus {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+  book Book[]
+}
+
+model Language {
+  id   Int    @id @default(autoincrement())
+  name String @unique
+  book Book[]
+}
+
+model Cart {
+  id     Int    @id @default(autoincrement())
+  userId Int    @unique
+  book   Book[] @relation("BookToCart")
+  user   User   @relation(fields: [userId], references: [id])
+}
+
+model Borrow {
+  id             Int          @id @default(autoincrement())
+  userId         Int
+  start          DateTime     @db.Date
+  end            DateTime     @db.Date
+  book           Book         @relation(fields: [bookId], references: [id])
+  user           User         @relation(fields: [userId], references: [id])
+  status         BorrowStatus @relation(fields: [borrowStatusId], references: [id])
+  renewalTimes   Int          @default(0)
+  borrowStatusId Int
+  bookId         Int
+  returnAt       DateTime?    @db.Date
+
+  @@index([userId])
+  @@index([bookId])
+  @@index([borrowStatusId])
+}
+
+model BorrowStatus {
+  id     Int      @id @default(autoincrement())
+  status String   @unique
+  borrow Borrow[]
+}
+
+model CollectionList {
+  id     Int    @id @default(autoincrement())
+  name   String
+  user   User   @relation(fields: [userId], references: [id])
+  book   Book[] @relation("BookToCollectionList")
+  userId Int
+
+  @@index([userId])
+}
+
+model HoldList {
+  id           Int        @id @default(autoincrement())
+  book         Book       @relation(fields: [bookId], references: [id])
+  bookId       Int
+  user         User       @relation(fields: [userId], references: [id])
+  status       HoldStatus @relation(fields: [holdStatusId], references: [id])
+  holdStatusId Int
+  userId       Int
+  from         DateTime?  @db.Date
+  to           DateTime?  @db.Date
+
+  @@index([userId])
+  @@index([bookId])
+  @@index([holdStatusId])
+}
+
+model HoldStatus {
+  id       Int        @id @default(autoincrement())
+  status   String     @unique
+  HoldList HoldList[]
+}
