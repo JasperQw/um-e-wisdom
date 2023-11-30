@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRightCircleIcon, ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import { LibraryInformationType } from "../(data)/LibraryInfo";
+import { nanoid } from "nanoid";
 
 export default function LibrarySection({
   info,
@@ -15,7 +16,7 @@ export default function LibrarySection({
   }
   return (
     <>
-      <div className="flex gap-10">
+      <div key={nanoid()} className="flex gap-10">
         <div className="relative min-w-[20rem] w-[20rem] h-[15rem]">
           <Image fill src={info.imageUrl} alt="um-library" />
         </div>
