@@ -33,7 +33,7 @@ export default function Sidebar({
 
   return (
     <AppliedFilterContext.Provider value={{ appliedFilter, setAppliedFilter }}>
-      <div className="border-r-[1px] border-r-gray-200 min-w-[20rem] max-w-[20rem] fixed top-[4rem] bottom-0 p-10 space-y-10 overflow-y-scroll overflow-x-hidden">
+      <div className="border-r-[1px] border-r-gray-200 min-w-[20rem] max-w-[20rem] p-10 space-y-10 overflow-y-scroll overflow-x-hidden">
         {empty ? (
           <div className="w-full h-full flex flex-col items-center justify-center">
             <h1 className="font-bold text-4xl">404</h1>

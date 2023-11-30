@@ -89,7 +89,7 @@ export default function Book() {
     <>
       {isLoading ? "" : <Sidebar categories={filterCategory} />}
 
-      <div className={`pl-[20rem] w-full ${books.length > 0 ? "" : "h-full"}`}>
+      <div className={` w-full ${books.length > 0 ? "" : "h-full"}`}>
         <div
           className={`h-full w-full p-10 ${
             books.length > 0 ? "" : "flex flex-col"

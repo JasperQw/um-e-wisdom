@@ -39,7 +39,7 @@ export default function Login() {
         <Image src={"/um-library.jpeg"} fill alt="bg" />
         <div className="inset-0 absolute flex justify-start px-[4rem] tracking-tight bg-black bg-opacity-50">
           <div className="h-[4rem] flex gap-3 items-center font-semibold text-xl text-white ">
-            <a href={"/book"}> UM e-Wisdom</a>
+            <a href={"/book"}>UM e-Wisdom</a>
           </div>
         </div>
       </div>
