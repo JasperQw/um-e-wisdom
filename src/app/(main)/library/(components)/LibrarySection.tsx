@@ -16,7 +16,7 @@ export default function LibrarySection({
   }
   return (
     <>
-      <div key={nanoid()} className="flex gap-10">
+      <div className="flex gap-10">
         <div className="relative min-w-[20rem] w-[20rem] h-[15rem]">
           <Image fill src={info.imageUrl} alt="um-library" />
         </div>
@@ -49,7 +49,10 @@ export default function LibrarySection({
           <div className="mt-5">
             {info.opening.map((open) => {
               return (
-                <div className="text-gray-300 flex justify-between">
+                <div
+                  key={nanoid()}
+                  className="text-gray-300 flex justify-between"
+                >
                   <p>{open.day}</p>
                   <p>{open.time}</p>
                 </div>
