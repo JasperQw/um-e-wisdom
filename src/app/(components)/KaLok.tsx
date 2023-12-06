@@ -13,8 +13,8 @@ export default function KaLok() {
         <p className="text-white text-md font-extralight text-justify">
           Yeep Ka Lok is our project captain, steering us through the digital
           seas. With a keen eye for detail and a knack for organization, Ka Lok
-          crafts our project's blueprint, sets sail with a well-defined plan,
-          and keeps our crew on course. Regular meetings and meticulous
+          crafts our project&apos;s blueprint, sets sail with a well-defined
+          plan, and keeps our crew on course. Regular meetings and meticulous
           documentation are the wind in his sails as he ensures we reach our
           destination on time and on budget.
         </p>

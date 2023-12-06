@@ -15,7 +15,7 @@ export default function ChingWei() {
           dreams. Armed with logic and precision, Ching Wei translates ideas
           into lines of code. Bugs dare not linger in his presence, and security
           is woven into every line. His creations are not just functional;
-          they're a symphony of innovation.
+          they&apos;re a symphony of innovation.
         </p>
 
         <div className="flex gap-10 mt-10">
