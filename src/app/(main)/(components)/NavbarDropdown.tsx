@@ -16,6 +16,7 @@ import {
 import {
   ChevronDown,
   ClipboardCheck,
+  FileQuestion,
   LogOut,
   LucideCircleDollarSign,
   RecycleIcon,
@@ -104,6 +105,16 @@ export default function NavbarDropdown({ studentId }: { studentId: string }) {
               <DropdownMenuItem className="flex gap-4 items-center w-full cursor-pointer">
                 <LucideCircleDollarSign width={18} height={18} />
                 <p>Payment</p>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem
+                asChild
+                className="flex gap-4 items-center w-full cursor-pointer"
+              >
+                <Link href="/request">
+                  {" "}
+                  <FileQuestion width={18} height={18} /> Request
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>

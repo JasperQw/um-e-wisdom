@@ -12,7 +12,7 @@ export async function middleware(request: NextRequest) {
       request.cookies.delete("token");
       return NextResponse.redirect(new URL("/login", request.url));
     }
-    if (path === "/" || path === "/login") {
+    if (path === "/login") {
       return NextResponse.redirect(new URL("/profile", request.url));
     }
   } else {
@@ -28,7 +28,6 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     "/profile/:path*",
-    "/",
     "/login",
     "/cart",
     "/collection",

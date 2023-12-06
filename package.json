@@ -26,6 +26,7 @@
     "bcrypt": "^5.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "framer-motion": "^10.16.14",
     "jose": "^5.1.0",
     "lucide-react": "^0.292.0",
     "moment": "^2.29.4",
@@ -35,7 +36,8 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
