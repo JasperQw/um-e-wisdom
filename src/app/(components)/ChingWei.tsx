@@ -7,7 +7,7 @@ export default function ChingWei() {
         <h1 className="text-white text-xl font-semibold tracking-wider">
           Software Developer
         </h1>
-        <h1 className="text-[3rem] font-bold text-[#FF914D] tracking-wider my-8">
+        <h1 className="text-[3rem] font-bold text-red-400 tracking-wider my-8">
           Ng Ching Wei
         </h1>
         <p className="text-white text-md font-extralight text-justify">

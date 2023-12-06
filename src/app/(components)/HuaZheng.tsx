@@ -7,7 +7,7 @@ export default function HuaZheng() {
         <h1 className="text-white text-xl font-semibold tracking-wider">
           Database Administrator
         </h1>
-        <h1 className="text-[3rem] font-bold text-[#FF914D] tracking-wider my-8">
+        <h1 className="text-[3rem] font-bold text-blue-400 tracking-wider my-8">
           Ling Hua Zheng
         </h1>
         <p className="text-white text-md font-extralight text-justify">

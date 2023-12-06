@@ -7,7 +7,7 @@ export default function XueJou() {
         <h1 className="text-white text-xl font-semibold tracking-wider">
           System Analyst
         </h1>
-        <h1 className="text-[3rem] font-bold text-[#FF914D] tracking-wider my-8">
+        <h1 className="text-[3rem] font-bold text-purple-400 tracking-wider my-8">
           Chng Xue Jou
         </h1>
         <p className="text-white text-md font-extralight text-justify">
