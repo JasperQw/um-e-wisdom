@@ -14,9 +14,11 @@ export default function MemberCard({
       return (
         <>
           <div className="h-[12rem] w-full bg-orange-400"></div>
-          <div
-            className={`absolute inset-0 bottom-[-1px] bg-[url('/chingwei-3.png')] bg-cover bg-no-repeat bg-center`}
-          ></div>
+          <div className="absolute inset-0 w-full h-full bottom-0 top-0 flex justify-center">
+            <div
+              className={`bg-[url('/kalok-1.png')] bg-cover w-full bg-no-repeat bg-center`}
+            ></div>
+          </div>
         </>
       );
     } else if (name === "Ng Ching Wei") {
