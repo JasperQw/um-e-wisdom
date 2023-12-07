@@ -29,7 +29,7 @@ export default function XueJou() {
         </div>
       </div>
 
-      <div className="absolute brightness-105 right-[5rem] top-[5rem] bottom-0 w-[40rem] bg-[url('/xj-2.png')] bg-cover bg-no-repeat bg-center"></div>
+      <div className="absolute brightness-105 right-[5rem] top-[5rem] bottom-0 w-[35rem] bg-[url('/xj-2.png')] bg-cover bg-no-repeat bg-center"></div>
     </>
   );
 }

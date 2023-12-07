@@ -55,7 +55,7 @@ export default function MemberCard({
         <>
           <div className="h-[12rem] w-full bg-green-400"></div>
           <div
-            className={`absolute inset-0 bottom-[-1px] bg-[url('/chingwei-3.png')] bg-cover bg-no-repeat bg-center`}
+            className={`absolute inset-0 bottom-[-1px] bg-[url('/shuci-1.png')] bg-cover bg-no-repeat bg-center`}
           ></div>
         </>
       );

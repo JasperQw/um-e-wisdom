@@ -27,7 +27,7 @@ export default function ShuCi() {
         </div>
       </div>
 
-      <div className="absolute right-[5rem] top-[5rem] bottom-0 w-[40rem] bg-[url('/chingwei-3.png')] bg-cover bg-no-repeat bg-center"></div>
+      <div className="absolute right-[5rem] top-[5rem] bottom-0 w-[35rem] bg-[url('/shuci-1.png')] bg-cover bg-no-repeat bg-center"></div>
     </>
   );
 }
