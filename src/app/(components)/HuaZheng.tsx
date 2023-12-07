@@ -25,7 +25,7 @@ export default function HuaZheng() {
         </div>
       </div>
 
-      <div className="absolute right-[5rem] top-[5rem] bottom-0 w-[40rem] bg-[url('/chingwei-3.png')] bg-cover bg-no-repeat bg-center"></div>
+      <div className="absolute right-[5rem] top-[5rem] bottom-0 w-[40rem] bg-[url('/huazheng-2.png')] bg-cover bg-no-repeat bg-center"></div>
     </>
   );
 }
