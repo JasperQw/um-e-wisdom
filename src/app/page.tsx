@@ -10,7 +10,7 @@ import ShuCi from "./(components)/ShuCi";
 
 export default function Home() {
   return (
-    <main className="relative bg-[url('/darkgradient.avif')] overflow-x-hidden h-[100vh] snap-y snap-mandatory">
+    <main className="relative bg-[url('/dark-gradient.jpeg')] overflow-x-hidden h-[100vh] snap-y snap-mandatory">
       <div className="inset-0 absolute flex justify-start px-[4rem] tracking-tight">
         <div className="h-[4rem] flex gap-3 items-center font-semibold text-xl text-white z-[999]">
           <a href={"/book"}>UM e-Wisdom</a>
