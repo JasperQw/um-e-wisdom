@@ -46,6 +46,15 @@ export default function Sidebar() {
         >
           Holds
         </Link>
+        <Link
+          role="button"
+          href="/profile/room_booking"
+          className={`text-sm font-[500] w-[15rem] rounded-lg ${
+            path === "/profile/room_booking" ? "bg-muted" : ""
+          } px-4 py-[0.5rem] block`}
+        >
+          Room Booking
+        </Link>
       </nav>
     </>
   );

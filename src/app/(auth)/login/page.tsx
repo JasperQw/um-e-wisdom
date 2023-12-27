@@ -43,8 +43,8 @@ export default function Login() {
           </div>
         </div>
       </div>
-      <Card className="w-1/2 h-full flex flex-col justify-center items-center rounded-none border-none flex-1">
-        <CardHeader className="flex flex-col justify-center items-center">
+      <Card className="h-full flex flex-col justify-center items-center rounded-none border-none flex-1 p-10">
+        <CardHeader className="w-full flex flex-col justify-center items-center">
           <CardTitle>Login</CardTitle>
           <CardDescription>Login to your account.</CardDescription>
           <ErrorAlert
@@ -53,7 +53,7 @@ export default function Login() {
           />
         </CardHeader>
 
-        <form className="w-[30rem]" action={loginAction} ref={formRef}>
+        <form className="w-full" action={loginAction} ref={formRef}>
           <CardContent>
             <div>
               <div className="grid w-full gap-4">

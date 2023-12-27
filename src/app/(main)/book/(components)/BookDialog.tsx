@@ -13,8 +13,6 @@ import { LocationDataTable } from "./LocationDataTable";
 import { columns } from "./LocationColumns";
 import { BookType } from "@/dto/bookDTO";
 import { nanoid } from "nanoid";
-import BookDialogAction from "./BookDialogAction";
-import { Button } from "@/components/ui/button";
 import SelectCollectionListDialog from "./SelectCollectionListDialog";
 
 export default function BookDialog({ book }: { book: BookType }) {

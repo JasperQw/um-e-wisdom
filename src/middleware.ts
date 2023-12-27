@@ -33,5 +33,7 @@ export const config = {
     "/collection",
     "/return",
     "/renew",
+    "/payment",
+    "/room_booking",
   ],
 };

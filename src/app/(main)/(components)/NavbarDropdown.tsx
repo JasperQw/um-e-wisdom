@@ -102,9 +102,14 @@ export default function NavbarDropdown({ studentId }: { studentId: string }) {
                   <RecycleIcon width={18} height={18} /> Renew
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="flex gap-4 items-center w-full cursor-pointer">
-                <LucideCircleDollarSign width={18} height={18} />
-                <p>Payment</p>
+              <DropdownMenuItem
+                asChild
+                className="flex gap-4 items-center w-full cursor-pointer"
+              >
+                <Link href={"/payment"}>
+                  <LucideCircleDollarSign width={18} height={18} />
+                  <p>Payment</p>
+                </Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem
