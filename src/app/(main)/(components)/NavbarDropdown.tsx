@@ -17,6 +17,7 @@ import {
   ChevronDown,
   ClipboardCheck,
   FileQuestion,
+  HomeIcon,
   LogOut,
   LucideCircleDollarSign,
   RecycleIcon,
@@ -119,6 +120,15 @@ export default function NavbarDropdown({ studentId }: { studentId: string }) {
                 <Link href="/request">
                   {" "}
                   <FileQuestion width={18} height={18} /> Request
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                asChild
+                className="flex gap-4 items-center w-full cursor-pointer"
+              >
+                <Link href="/room_booking">
+                  {" "}
+                  <HomeIcon width={18} height={18} /> Room Booking
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuSubContent>
