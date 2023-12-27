@@ -93,7 +93,7 @@ export default function Payment() {
                           height={40}
                           src={"/tng.svg"}
                         />{" "}
-                        Touch'n Go
+                        Touch&apos;n Go
                       </div>
                     </SelectItem>
                   </SelectGroup>
