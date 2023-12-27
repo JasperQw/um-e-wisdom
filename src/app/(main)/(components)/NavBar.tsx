@@ -33,7 +33,12 @@ export default function NavBar() {
         {/* <a href={"/book"}>UM e-Wisdom</a> */}
         <NavbarLogo />
       </div>
-      <NavSearchBar />
+      {studentId === "" ? (
+        <NavSearchBar EBSCOEnable={false} />
+      ) : (
+        <NavSearchBar EBSCOEnable={true} />
+      )}
+
       <div>
         {studentId === "" && isLoading === false ? (
           <Link href={"/login"}>Login</Link>

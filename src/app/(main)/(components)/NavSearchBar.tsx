@@ -13,7 +13,11 @@ import { SearchCriteriaType } from "@/dto/bookDTO";
 import { Search } from "lucide-react";
 import { nanoid } from "nanoid";
 import { useEffect, useRef, useState } from "react";
-export default function NavSearchBar() {
+export default function NavSearchBar({
+  EBSCOEnable,
+}: {
+  EBSCOEnable: boolean;
+}) {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchDropdownRef = useRef<HTMLDivElement>(null);
   const [searchCriteria, setSearchCriteria] = useState<SearchCriteriaType>({
@@ -22,7 +26,7 @@ export default function NavSearchBar() {
   });
   const [showPossibleSearch, setShowPossibleSearch] = useState<boolean>(false);
   const [possibleSeach, setPossibleSearch] = useState<string[]>([]);
-
+  const [EBSCO, setEBSCO] = useState<boolean>(false);
   function onCategoryChange(value: string) {
     setSearchCriteria((prev) => ({
       ...prev,
@@ -107,6 +111,21 @@ export default function NavSearchBar() {
           type="text"
           placeholder="Search..."
         />
+
+        {EBSCOEnable ? (
+          <div
+            onClick={() => {
+              setEBSCO((prev) => !prev);
+            }}
+            className={`absolute right-3 cursor-pointer top-[0.35rem] text-sm ${
+              EBSCO ? "bg-green-500 text-white" : "bg-gray-300"
+            } px-2 py-1 rounded-lg`}
+          >
+            EBSCO
+          </div>
+        ) : (
+          ""
+        )}
 
         {possibleSeach.length > 0 && showPossibleSearch ? (
           <div
