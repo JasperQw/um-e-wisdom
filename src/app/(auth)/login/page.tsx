@@ -58,7 +58,7 @@ export default function Login() {
             <div>
               <div className="grid w-full gap-4">
                 <div className="flex flex-col space-y-1.5">
-                  <Label htmlFor="student_id">Student ID</Label>
+                  <Label htmlFor="student_id">Institution ID</Label>
                   <Input
                     name="student_id"
                     id="student_id"
