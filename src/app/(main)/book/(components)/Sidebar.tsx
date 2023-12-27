@@ -46,19 +46,6 @@ export default function Sidebar({
 
         <AppliedFilterSection applied={appliedFilter} />
 
-        <div className="space-y-5">
-          <h1 className="text-sm font-[600] w-full">EBSCO Discovery System</h1>
-          <div className="flex items-center space-x-2">
-            <Checkbox id="EBSCO" />
-            <label
-              htmlFor="EBSCO"
-              className="text-xs truncate font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              Enable
-            </label>
-          </div>
-        </div>
-
         <FilterSection
           paramsKey="author"
           title="Author"
